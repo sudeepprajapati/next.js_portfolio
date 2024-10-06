@@ -2,6 +2,7 @@ import { projects } from '@/data'
 import React from 'react'
 import { PinContainer } from './ui/Pin'
 import { FaLocationArrow } from 'react-icons/fa'
+import Link from 'next/link'
 
 const RecentProjects = () => {
     return (
@@ -12,15 +13,15 @@ const RecentProjects = () => {
             </h1>
             <div className="sm:flex flex-wrap items-center justify-center p-4 gap-y-8 gap-x-24 mt-10">
                 {projects.map((
-                    { id, title, des, img, iconLists, link }
+                    { id, title, des, img, iconLists, visit, link }
                 ) => (
                     <div key={id} className='sm:h-[41] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[90vw]'>
-                        <PinContainer title={link} href={link}>
+                        <PinContainer title={link} >
                             <div className='relative flex items-center justify-center sm:w-[500px] w-[80vw] overflow-hidden sm:h-[35vh] h-[30vh] mb-10 '>
                                 <div className='relative  w-full h-full  overflow-hidden lg:rounded-3xl bg-[#13162d]'>
                                     <img src="/bg.png" alt="bg-img" />
                                 </div>
-                                <img src={img} alt={title} className='z-10 absolute bottom-0' />
+                                <img src={img} alt={title} className='z-10 absolute bottom-0 rounded-3xl' />
                             </div>
                             <h1 className='font-bold  md:text-xl text-base line-clamp-1 '>
                                 {title}
@@ -46,7 +47,7 @@ const RecentProjects = () => {
                                 </div>
 
                                 <div className="flex justify-center items-center">
-                                    <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Check Live Site</p>
+                                    <Link href={visit} target='blank' className='flex lg:text-xl md:text-xs text-sm text-purple'>Check Live Site</Link>
                                     <FaLocationArrow
                                         className='ms-3'
                                         color='#cbacf9'
