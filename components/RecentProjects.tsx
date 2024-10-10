@@ -17,12 +17,23 @@ const RecentProjects = () => {
                 ) => (
                     <div key={id} className='sm:h-[41] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[90vw]'>
                         <PinContainer title={link} >
-                            <div className='relative flex items-center justify-center sm:w-[500px] w-[80vw] overflow-hidden sm:h-[35vh] h-[30vh] mb-10 '>
+                            {/* <div className='relative flex items-center justify-center sm:w-[500px] w-[80vw] overflow-hidden sm:h-[35vh] h-[30vh] mb-10 '>
                                 <div className='relative  w-full h-full  overflow-hidden lg:rounded-3xl bg-[#13162d]'>
                                     <img src="/bg.png" alt="bg-img" />
                                 </div>
-                                <img src={img} alt={title} className='z-10 absolute bottom-0 rounded-3xl' />
+                                <img src={img} alt={title} className=' z-10 absolute bottom-0 rounded-3xl' />
+                            </div> */}
+                            <div className='relative flex items-center justify-center sm:w-[500px] w-[80vw] overflow-hidden sm:h-[35vh] h-[30vh] mb-10'>
+                                <div className='relative  w-full h-full  overflow-hidden lg:rounded-3xl bg-[#13162d]'>
+                                    <img src="/bg.png" alt="bg-img" className={`${id < 4 ? 'w-full h-full object-cover transform rotate-[5deg]' : ''}`} />
+                                </div>
+                                <img
+                                    src={img}
+                                    alt={title}
+                                    className={`${id < 4 ? 'z-10 absolute bottom-0 rounded-3xl top-0 left-0 w-full h-full object-cover transform rotate-[5deg] scale-97' : 'z-10 absolute bottom-0 rounded-3xl'}`}
+                                />
                             </div>
+
                             <h1 className='font-bold  md:text-xl text-base line-clamp-1 '>
                                 {title}
                             </h1>
