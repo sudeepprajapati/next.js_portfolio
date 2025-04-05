@@ -72,12 +72,12 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Threads App - Social Media Platform",
-    des: "Connect to world communicate and share your thoughts.",
-    img: "/threads.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg",],
-    link: "/threads.app",
-    visit: "https://threads-app-psb5.vercel.app/",
+    title: "Prepwise - AI-Powered Job Interview Prep",
+    des: "A platform that helps users prepare for job interviews using Vapi AI voice agents and Google Gemini.",
+    img: "/p7.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg"],
+    link: "/prepwise.app",
+    visit: "https://prepwiseapp.vercel.app/"
   },
   {
     id: 2,
@@ -91,6 +91,15 @@ export const projects = [
   },
   {
     id: 3,
+    title: "Threads App - Social Media Platform",
+    des: "Connect to world communicate and share your thoughts.",
+    img: "/threads.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg",],
+    link: "/threads.app",
+    visit: "https://threads-app-psb5.vercel.app/",
+  },
+  {
+    id: 4,
     title: "Anime Vault - Infinite Scroll Anime Cards",
     des: "Explore an endless collection of anime cards with details, thanks to the infinite scroll feature.",
     img: "/anime.jpg",
@@ -98,14 +107,15 @@ export const projects = [
     link: "/anime.app",
     visit: "https://anime-voruto.vercel.app/",
   },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.png"],
-    visit: "/ui.apple.com",
-  },
+  // {
+  //   id: 4,
+  //   title: "PicNest: Image selling application",
+  //   des: "A platform for photographers to sell their images and for users to buy them.",
+  //   img: "/p4.png",
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/imagekit.png", "/razorpay.png"],
+  //   link: "/picnest.app",
+  //   visit: "https://picnest.vercel.app/",
+  // },
 ];
 
 
