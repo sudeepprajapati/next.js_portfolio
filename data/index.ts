@@ -138,6 +138,6 @@ export const socialMedia = [
   {
     id: 4,
     img: "/twit.svg",
-    link: "https://x.com/SudeepPrajapatii"
+    link: "https://x.com/Sudeep_Prajapat"
   },
 ];

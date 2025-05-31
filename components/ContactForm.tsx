@@ -9,7 +9,6 @@ import axios from "axios";
 import { Input } from "./ui/Input";
 import { Label } from "./ui/Label";
 import { cn } from "@/utils/cn";
-import MagicButton from "./ui/MagicButton";
 import { toast } from "sonner";
 import { FaLocationArrow, FaMapMarkerAlt, FaPhoneAlt, FaMailBulk, FaWhatsapp } from "react-icons/fa";
 
@@ -20,6 +19,30 @@ const contactSchema = z.object({
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
+
+const contactLinks = [
+    {
+        href: "mailto:sudeep.mint@gmail.com",
+        label: "sudeep.mint@gmail.com",
+        icon: <FaMailBulk className="h-4 w-4" />,
+    },
+    {
+        href: "tel:+919302383944",
+        label: "+91 93023 83944",
+        icon: <FaPhoneAlt className="h-4 w-4" />,
+    },
+    {
+        href: "https://www.google.com/maps/place/Ujjain,+Madhya+Pradesh,+India/@23.1807,75.7779,12z/data=!3m1!4b1!4m6!3m5!1s0x3962f8c8d8d8d8d8:0x1234567890abcdef!8m2!3d23.1807!4d75.7779!16zL20vMDNnZ2Y",
+        label: "Ujjain, Madhya Pradesh, Bharat",
+        icon: <FaMapMarkerAlt className="h-4 w-4" />,
+    },
+    {
+        href: "https://wa.me/+919302383944",
+        label: "Chat on Whatsapp",
+        icon: <FaWhatsapp className="h-4 w-4" />,
+    },
+];
+
 
 export function ContactForm() {
     const {
@@ -106,50 +129,20 @@ export function ContactForm() {
                 <div className="my-4 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
 
                 {/* Contact Info Panel */}
-                <div className="flex flex-col space-y-4 ">
-                    {/* Email */}
-                    <a
-                        className="group/btn shadow-input relative flex h-10 w-full items-center justify-center space-x-2 rounded-md px-4 font-medium text-black backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 "
-                        href="mailto:sudeep.mint@gmail.com"
-                        target="_blank"
-                    >
-                        <FaMailBulk className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                        <span className="text-sm text-neutral-700 dark:text-neutral-300 ">sudeep.mint@gmail.com</span>
-                        <BottomGradient />
-                    </a>
-                    {/* Phone */}
-                    <a
-                        className="group/btn shadow-input relative flex h-10 w-full items-center justify-center space-x-2 rounded-md px-4 font-medium text-black backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 "
-                        href="tel:+919302383944"
-                        target="_blank"
-
-                    >
-                        <FaPhoneAlt className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                        <span className="text-sm text-neutral-700 dark:text-neutral-300">+91 93023 83944</span>
-                        <BottomGradient />
-                    </a>
-
-                    {/* Address */}
-                    <a
-                        className="group/btn shadow-input relative flex h-10 w-full items-center justify-center space-x-2 rounded-md px-4 font-medium text-black backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 "
-                        href="https://www.google.com/maps/place/Ujjain,+Madhya+Pradesh,+India/@23.1807,75.7779,12z/data=!3m1!4b1!4m6!3m5!1s0x3962f8c8d8d8d8d8:0x1234567890abcdef!8m2!3d23.1807!4d75.7779!16zL20vMDNnZ2Y"
-                        target="_blank"
-                    >
-                        <FaMapMarkerAlt className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                        <span className="text-sm text-neutral-700 dark:text-neutral-300">Ujjain, Madhya Pradesh, Bharat</span>
-                        <BottomGradient />
-                    </a>
-                    <a
-                        className="group/btn shadow-input relative flex h-10 w-full items-center justify-center space-x-2 rounded-md px-4 font-medium text-black backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 "
-                        href="https://wa.me/+919302383944"
-                        target="_blank"
-                    >
-                        <FaWhatsapp className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-                        <span className="text-sm text-neutral-700 dark:text-neutral-300"> Whatsapp </span>
-                        <BottomGradient />
-                    </a>
+                <div className="flex flex-col space-y-4 text-white ">
+                    {contactLinks.map((item, index) => (
+                        <a
+                            key={index}
+                            href={item.href}
+                            target="_blank"
+                            className="group/btn shadow-input relative flex h-10 w-full items-center justify-center space-x-2 rounded-md px-4 font-medium backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200"
+                        >
+                            {item.icon}
+                            <span className="text-sm">{item.label}</span>
+                            <BottomGradient />
+                        </a>
+                    ))}
                 </div>
-
 
             </div >
 
