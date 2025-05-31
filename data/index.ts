@@ -127,12 +127,17 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
-    link: "https://x.com/Sudeep_mint?t=SzPC-xHjlJEHdXRLx-IQDQ&s=09"
+    img: "/link.svg",
+    link: "https://www.linkedin.com/in/sudeep-prajapati"
   },
   {
     id: 3,
-    img: "/link.svg",
-    link: "https://www.linkedin.com/in/sudeep-prajapati-24506a214"
+    img: "insta.svg",
+    link: "https://www.instagram.com/sudeep.tsx"
+  },
+  {
+    id: 4,
+    img: "/twit.svg",
+    link: "https://x.com/SudeepPrajapatii"
   },
 ];
