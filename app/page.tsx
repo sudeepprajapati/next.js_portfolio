@@ -12,11 +12,21 @@ export default function Home() {
     <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip">
       <div className="max-w-7xl w-full"></div>
       <FloatingNav navItems={navItems} />
-      <Hero />
-      <Grid />
-      <RecentProjects />
-      <Approach />
-      <ContactForm />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="about">
+        <Grid />
+      </section>
+      <section id="projects">
+        <RecentProjects />
+      </section>
+      <section id="approach">
+        <Approach />
+      </section>
+      <section id="contact">
+        <ContactForm />
+      </section>
       <Footer />
     </main>
   );
