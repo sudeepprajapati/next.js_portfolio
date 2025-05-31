@@ -1,16 +1,13 @@
 import React from 'react'
-import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa'
 import { socialMedia } from '@/data'
 
 const Footer = () => {
+    const year = new Date().getFullYear()
     return (
         <footer className="w-full pb-5 mb-7 md:mb-5" id="contact">
-
-
             <div className="flex mt-16 md:flex-row flex-col justify-between gap-5 md:gap-0 items-center">
                 <p className="text-center md:text-base text-sm md:font-normal font-light">
-                    Copyright &copy; 2024 Sudeep Prajapati
+                    Copyright &copy; {year} Sudeep Prajapati
                 </p>
                 <div className="flex items-center md:gap-3 gap-6">
                     {socialMedia.map((profile) => (
