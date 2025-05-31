@@ -10,6 +10,7 @@ import { Input } from "./ui/Input";
 import { Label } from "./ui/Label";
 import { cn } from "@/utils/cn";
 import MagicButton from "./ui/MagicButton";
+import { toast } from "sonner";
 import { FaLocationArrow, FaMapMarkerAlt, FaPhoneAlt, FaMailBulk, FaWhatsapp } from "react-icons/fa";
 
 const contactSchema = z.object({
@@ -34,10 +35,10 @@ export function ContactForm() {
         try {
             await axios.post("https://formspree.io/f/xvojadjn", data);
             reset();
-            alert("Message sent successfully!");
+            toast.success("Message sent successfully!");
         } catch (error) {
             console.error("Submission error", error);
-            alert("Failed to send message.");
+            toast.error("Failed to send message. Please try again.");
         }
     };
 
@@ -54,7 +55,7 @@ export function ContactForm() {
 
             <div className="mt-10 flex flex-col gap-8 max-w-3xl mx-auto">
                 {/* Contact Form */}
-                <div className="shadow-input w-full rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-transparent border border-white/[0.2]">
+                <div className="shadow-input w-full rounded-lg bg-white p-4 md:rounded-2xl md:p-8 dark:bg-transparent border border-white/[0.2]">
                     <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
                         Contact Me
                     </h2>
@@ -140,7 +141,7 @@ export function ContactForm() {
                     </a>
                     <a
                         className="group/btn shadow-input relative flex h-10 w-full items-center justify-center space-x-2 rounded-md px-4 font-medium text-black backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 "
-                        href="https://wa.me/9302383944"
+                        href="https://wa.me/+919302383944"
                         target="_blank"
                     >
                         <FaWhatsapp className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
