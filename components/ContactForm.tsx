@@ -79,10 +79,10 @@ export function ContactForm() {
             <div className="mt-10 flex flex-col gap-8 max-w-3xl mx-auto">
                 {/* Contact Form */}
                 <div className="shadow-input w-full rounded-lg bg-white p-4 md:rounded-2xl md:p-8 dark:bg-transparent border border-white/[0.2]">
-                    <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
+                    <h2 className="text-xl font-bold text-white">
                         Contact Me
                     </h2>
-                    <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
+                    <p className="mt-2 max-w-sm text-sm text-white-100">
                         Feel free to reach out with any questions or opportunities.
                     </p>
 
