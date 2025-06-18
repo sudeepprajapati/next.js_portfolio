@@ -91,6 +91,15 @@ export const projects = [
   },
   {
     id: 3,
+    title: "Siya Jewels Infotech",
+    des: "A website for Siya Jewels Infotech, showcasing their products and services.",
+    img: "/siyajewelsinfotech.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg",],
+    link: "/siyajewelsinfotech.com/",
+    visit: "https://siyajewelsinfotech.com/",
+  },
+  {
+    id: 4,
     title: "Threads App - Social Media Platform",
     des: "Connect to world communicate and share your thoughts.",
     img: "/threads.png",
@@ -99,7 +108,7 @@ export const projects = [
     visit: "https://threads-app-psb5.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Anime Vault - Infinite Scroll Anime Cards",
     des: "Explore an endless collection of anime cards with details, thanks to the infinite scroll feature.",
     img: "/anime.jpg",
