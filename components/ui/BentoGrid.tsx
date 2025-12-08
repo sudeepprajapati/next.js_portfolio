@@ -49,7 +49,7 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
-  const handleCopy = () =>{
+  const handleCopy = () => {
     navigator.clipboard.writeText('sudeep.mint@gmail.com');
 
     setCopied(true)
@@ -113,11 +113,11 @@ export const BentoGridItem = ({
                       {item}
                     </span>
                   ))}
-                  <span className="sm:py-4 py-2 px-2 rounded-lg text-center bg-[#10132E] " />
+                <span className="sm:py-4 py-2 px-2 rounded-lg text-center bg-[#10132E] " />
               </div>
               <div className="flex flex-col gap-3 lg:gap-4 ">
-                  <span className="sm:py-4 py-2 px-2 rounded-lg text-center bg-[#10132E] "/>
-                {['TailwindCSS', 'JavaScript', 'MongoDB', ].map
+                <span className="sm:py-4 py-2 px-2 rounded-lg text-center bg-[#10132E] " />
+                {['TailwindCSS', 'JavaScript', 'MongoDB',].map
                   ((item) => (
                     <span key={item} className="py-1 lg:py-2.5 lg:px-3 px-2 text-xs lg:text-sm  opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                       {item}
@@ -136,15 +136,15 @@ export const BentoGridItem = ({
                   rendererSettings: {
                     preserveAspectRatio: 'xMidYMid slice',
                   }
-                }}/>
+                }} />
               </div>
 
-              <MagicButton 
-              title={copied ? 'Email copied' : "Copy my Email"}
-              icon={<IoCopyOutline />}
-              position="left"
-              otherClasses="!bg-[#161a31]"
-              handleClick={handleCopy}
+              <MagicButton
+                title={copied ? 'Email copied' : "Copy my Email"}
+                icon={<IoCopyOutline />}
+                position="left"
+                otherClasses="!bg-[#161a31]"
+                handleClick={handleCopy}
               />
             </div>
           )}

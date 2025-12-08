@@ -105,7 +105,7 @@ export const projects = [
     img: "/threads.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg",],
     link: "/threads.app",
-    visit: "https://threads-app-psb5.vercel.app/",
+    visit: "https://threads-psi.vercel.app/",
   },
   {
     id: 5,
