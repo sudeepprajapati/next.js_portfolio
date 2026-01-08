@@ -72,12 +72,12 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Prepwise - AI-Powered Job Interview Prep",
-    des: "A platform that helps users prepare for job interviews using Vapi AI voice agents and Google Gemini.",
-    img: "/p7.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg"],
-    link: "/prepwise.app",
-    visit: "https://prepwiseapp.vercel.app/"
+    title: "DevEvent- Tech Events Hub",
+    des: "The Hub for Every Dev Event You Can't Miss",
+    img: "https://raw.githubusercontent.com/adrianhajdin/dev-events-nextjs16-crash-course/main/public/readme/readme-hero.webp",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/razorpay.svg",],
+    link: "/anime.app",
+    visit: "https://anime-voruto.vercel.app/",
   },
   {
     id: 2,
@@ -91,21 +91,21 @@ export const projects = [
   },
   {
     id: 3,
+    title: "Prepwise - AI-Powered Job Interview Prep",
+    des: "A platform that helps users prepare for job interviews using Vapi AI voice agents and Google Gemini.",
+    img: "/p7.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg"],
+    link: "/prepwise.app",
+    visit: "https://prepwiseapp.vercel.app/"
+  },
+  {
+    id: 4,
     title: "Siya Jewels Infotech",
     des: "A website for Siya Jewels Infotech, showcasing their products and services.",
     img: "/siyajewelsinfotech.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg",],
     link: "/siyajewelsinfotech.com/",
     visit: "https://siyajewelsinfotech.com/",
-  },
-  {
-    id: 4,
-    title: "Threads App - Social Media Platform",
-    des: "Connect to world communicate and share your thoughts.",
-    img: "/threads.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg",],
-    link: "/threads.app",
-    visit: "https://threads-psi.vercel.app/",
   },
   {
     id: 5,
@@ -116,15 +116,15 @@ export const projects = [
     link: "/anime.app",
     visit: "https://anime-voruto.vercel.app/",
   },
-  // {
-  //   id: 4,
-  //   title: "PicNest: Image selling application",
-  //   des: "A platform for photographers to sell their images and for users to buy them.",
-  //   img: "/p4.png",
-  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/imagekit.png", "/razorpay.png"],
-  //   link: "/picnest.app",
-  //   visit: "https://picnest.vercel.app/",
-  // },
+  {
+    id: 6,
+    title: "Tunenest: Master the art of music",
+    des: "A music learning platform that offers structured courses, interactive lessons, and personalized feedback to help users master various musical instruments and vocal techniques.",
+    img: "/tunenest.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg",],
+    link: "/tunenest.app",
+    visit: "https://tunenest.vercel.app/",
+  },
 ];
 
 
