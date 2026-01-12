@@ -1,4 +1,5 @@
 export const navItems = [
+  { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Approach", link: "#approach" },
@@ -75,7 +76,7 @@ export const projects = [
     title: "DevEvent- Tech Events Hub",
     des: "The Hub for Every Dev Event You Can't Miss",
     img: "https://raw.githubusercontent.com/adrianhajdin/dev-events-nextjs16-crash-course/main/public/readme/readme-hero.webp",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/razorpay.svg",],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/razorpay.png",],
     link: "/anime.app",
     visit: "https://anime-voruto.vercel.app/",
   },
@@ -89,15 +90,15 @@ export const projects = [
     link: "live.docs",
     visit: "https://livedocsio.vercel.app/",
   },
-  {
-    id: 3,
-    title: "Prepwise - AI-Powered Job Interview Prep",
-    des: "A platform that helps users prepare for job interviews using Vapi AI voice agents and Google Gemini.",
-    img: "/p7.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg"],
-    link: "/prepwise.app",
-    visit: "https://prepwiseapp.vercel.app/"
-  },
+  // {
+  //   id: 3,
+  //   title: "Prepwise - AI-Powered Job Interview Prep",
+  //   des: "A platform that helps users prepare for job interviews using Vapi AI voice agents and Google Gemini.",
+  //   img: "/p7.png",
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg"],
+  //   link: "/prepwise.app",
+  //   visit: "https://prepwiseapp.vercel.app/"
+  // },
   {
     id: 4,
     title: "Siya Jewels Infotech",
