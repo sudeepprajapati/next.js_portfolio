@@ -1,12 +1,21 @@
 "use client"
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./Background-gradient-animation";
-import { GlobeDemo } from "./GridGlob";
+import dynamic from "next/dynamic";
 import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from '@/data/confetti.json'
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+
+const GlobeDemo = dynamic(() => import("./GridGlob").then((m) => m.GlobeDemo), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center h-64 text-white">
+      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
+    </div>
+  ),
+});
 
 export const BentoGrid = ({
   className,
