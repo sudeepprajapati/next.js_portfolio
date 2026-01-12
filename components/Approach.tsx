@@ -14,7 +14,7 @@ const Approach = () => {
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order='Phase 1' />}
-          description="We&apos;ll collabrate to map out your website&apos;s goals, target autdience, and the key functionalities. We'll discuss things like site structure, navigation, and content requirments."
+          description="We&apos;ll collaborate to map out your website&apos;s goals, target audience, and the key functionalities. We'll discuss things like site structure, navigation, and content requirements."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -22,7 +22,7 @@ const Approach = () => {
           />
         </Card>
         <Card title="Development & Progress Update" icon={<AceternityIcon order="Phase 2" />}
-          description="Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, i keep updated every step of the way."
+          description="Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -34,7 +34,7 @@ const Approach = () => {
             dotSize={2}
           />
         </Card>
-        <Card title="Development & Launch" icon={<AceternityIcon order="Phase 3" />}
+        <Card title="Quality Assurance & Launch" icon={<AceternityIcon order="Phase 3" />}
           description="This is where magic happens! Based on approved design, I&apos;ll translate everything into functional code, building your website from the ground up."
         >
           <CanvasRevealEffect
@@ -109,20 +109,20 @@ const AceternityIcon = ({ order }: { order: string }) => {
   );
 };
 
-export const Icon = ({ className, ...rest }: any) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className={className}
-      {...rest}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-    </svg>
-  );
+export const Icon = ({ className, ...rest }: React.SVGProps<SVGSVGElement>) => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className={className}
+            {...rest}
+        >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+        </svg>
+    );
 };
 
 export default Approach
