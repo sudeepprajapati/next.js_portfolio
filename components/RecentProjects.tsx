@@ -24,13 +24,13 @@ const RecentProjects = () => {
                                 <img src={img} alt={title} className=' z-10 absolute bottom-0 rounded-3xl' />
                             </div> */}
                             <div className='relative flex items-center justify-center sm:w-[500px] w-[80vw] overflow-hidden sm:h-[35vh] h-[30vh] mb-10'>
-                                <div className='relative  w-full h-full  overflow-hidden lg:rounded-3xl bg-[#13162d]'>
-                                    <img src="/bg.png" alt={`Background for ${title}`} className={`${id < 4 ? 'w-full h-full object-cover transform rotate-[5deg]' : ''}`} />
+                                <div className={`relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d] ${id < 4 ? 'transform rotate-[5deg] scale-110 origin-center' : ''}`}>
+                                    <img src="/bg.png" alt={`Background for ${title}`} className='w-full h-full object-cover' />
                                 </div>
                                 <img
                                     src={img}
                                     alt={`Screenshot of ${title} project`}
-                                    className={`${id < 4 ? 'z-10 absolute bottom-0 rounded-3xl top-0 left-0 w-full h-full object-cover transform rotate-[5deg] scale-97' : 'z-10 absolute bottom-0 rounded-3xl'}`}
+                                    className={`${id < 4 ? 'z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] object-cover rounded-3xl transform rotate-[5deg]' : 'z-10 absolute inset-0 w-full h-full object-cover rounded-3xl'}`}
                                 />
                             </div>
 
