@@ -79,27 +79,27 @@ export function ContactForm() {
             <div className="mt-10 flex flex-col gap-8 max-w-3xl mx-auto">
                 {/* Contact Form */}
                 <div className="shadow-input w-full rounded-lg bg-white p-4 md:rounded-2xl md:p-8 dark:bg-transparent border border-white/[0.2]">
-                    <h2 className="text-xl font-bold text-white">
+                    <h2 className="text-xl font-bold text-foreground">
                         Contact Me
                     </h2>
-                    <p className="mt-2 max-w-sm text-sm text-white-100">
+                    <p className="mt-2 max-w-sm text-sm text-muted-foreground">
                         Feel free to reach out with any questions or opportunities.
                     </p>
 
                     <form className="my-8 space-y-4" onSubmit={handleSubmit(onSubmit)}>
                         <LabelInputContainer>
                             <Label htmlFor="name">Name</Label>
-                            <Input id="name" {...register("name")} placeholder="John Doe" />
+                            <Input id="name" {...register("name")} placeholder="John Doe" aria-label="Enter your name" />
                             {errors.name && (
-                                <p className="text-red-500 text-sm">{errors.name.message}</p>
+                                <p className="text-red-500 text-sm" role="alert">{errors.name.message}</p>
                             )}
                         </LabelInputContainer>
 
                         <LabelInputContainer>
                             <Label htmlFor="email">Email</Label>
-                            <Input id="email" {...register("email")} placeholder="john@example.com" />
+                            <Input id="email" {...register("email")} placeholder="john@example.com" aria-label="Enter your email address" />
                             {errors.email && (
-                                <p className="text-red-500 text-sm">{errors.email.message}</p>
+                                <p className="text-red-500 text-sm" role="alert">{errors.email.message}</p>
                             )}
                         </LabelInputContainer>
 
@@ -110,17 +110,26 @@ export function ContactForm() {
                                 {...register("message")}
                                 placeholder="Write your message here..."
                                 className="min-h-[120px] w-full rounded-md border bg-transparent px-3 py-2 text-sm placeholder:text-neutral-500 focus:outline-none"
+                                aria-label="Write your message"
                             />
                             {errors.message && (
-                                <p className="text-red-500 text-sm">{errors.message.message}</p>
+                                <p className="text-red-500 text-sm" role="alert">{errors.message.message}</p>
                             )}
                         </LabelInputContainer>
                         <button
-                            className="group/btn relative flex justify-center items-center gap-2 h-10 w-full rounded-md  font-medium text-white border border-white-100"
+                            className="group/btn relative flex justify-center items-center gap-2 h-10 w-full rounded-md  font-medium text-white border border-white-100 disabled:opacity-50 disabled:cursor-not-allowed"
                             type="submit"
+                            aria-label="Send message"
+                            disabled={isSubmitting}
                         >
-                            <FaLocationArrow />
-                            <span>Send Message</span>
+                            {isSubmitting ? (
+                                <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent" />
+                            ) : (
+                                <>
+                                    <FaLocationArrow aria-hidden="true" />
+                                    <span>Send Message</span>
+                                </>
+                            )}
                             <BottomGradient />
                         </button>
                     </form>
@@ -135,7 +144,9 @@ export function ContactForm() {
                             key={index}
                             href={item.href}
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="group/btn shadow-input relative flex h-10 w-full items-center justify-center space-x-2 rounded-md px-4 font-medium backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200"
+                            aria-label={`Contact via ${item.label}`}
                         >
                             {item.icon}
                             <span className="text-sm">{item.label}</span>
