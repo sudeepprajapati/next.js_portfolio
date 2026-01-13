@@ -129,6 +129,44 @@ export const projects = [
 ];
 
 
+export const workExperience = [
+  {
+    id: 1,
+    title: "Freelance Developer",
+    desc: "Delivered a production-ready website for Siya Jewels Infotech, handling UI development, responsive layouts, performance optimization, and deployment. Collaborated directly with the client to translate business requirements into a polished web presence.",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+    projects: [
+      {
+        name: "Siya Jewels Infotech",
+        url: "https://siyajewelsinfotech.com",
+      },
+    ],
+  },
+
+  // {
+  //   id: 2,
+  //   title: "Mobile App Dev - JSM Tech",
+  //   desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+  //   className: "md:col-span-2", 
+  //   thumbnail: "/exp2.svg",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Freelance App Dev Project",
+  //   desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+  //   className: "md:col-span-2", 
+  //   thumbnail: "/exp3.svg",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Frontend Engineer Intern",
+  //   desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+  //   className: "md:col-span-2",
+  //   thumbnail: "/exp1.svg",
+  // },
+];
+
 export const socialMedia = [
   {
     id: 1,

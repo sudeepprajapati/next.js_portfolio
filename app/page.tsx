@@ -7,6 +7,7 @@ import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -24,6 +25,11 @@ export default function Home() {
       <section id="projects" className="w-full max-w-7xl">
         <ErrorBoundary>
           <RecentProjects />
+        </ErrorBoundary>
+      </section>
+      <section id="experience" className="w-full max-w-7xl">
+        <ErrorBoundary>
+          <Experience />
         </ErrorBoundary>
       </section>
       <section id="approach" className="w-full max-w-7xl">
