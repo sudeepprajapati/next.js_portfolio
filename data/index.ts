@@ -78,7 +78,7 @@ export const projects = [
     img: "https://raw.githubusercontent.com/adrianhajdin/dev-events-nextjs16-crash-course/main/public/readme/readme-hero.webp",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/razorpay.png",],
     link: "/anime.app",
-    visit: "https://anime-voruto.vercel.app/",
+    visit: "https://devevent-platform.vercel.app/",
   },
   {
     id: 2,
